@@ -19,3 +19,16 @@ update user set plugin="mysql_native_password" where User='root';
 flush privileges;
 quit;
 
+sudo apt install php libapache2-mod-php
+
+sudo systemctl restart apache2
+
+sudo apt install mysql-workbench
+
+sudo apt updatesudo apt install software-properties-common apt-transport-https wget
+
+wget -q https://packages.microsoft.com/keys/microsoft.asc -O- | sudo apt-key add -
+
+sudo add-apt-repository "deb [arch=amd64] https://packages.microsoft.com/repos/vscode stable main"
+
+sudo apt install code
