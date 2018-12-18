@@ -32,3 +32,10 @@ wget -q https://packages.microsoft.com/keys/microsoft.asc -O- | sudo apt-key add
 sudo add-apt-repository "deb [arch=amd64] https://packages.microsoft.com/repos/vscode stable main"
 
 sudo apt install code
+
+sudo mysql
+
+update mysql.user set plugin = 'mysql_native_password' where User='root';
+// to change the password too (credits goes to Pothi Kalimuthu)
+// UPDATE mysql.user SET plugin = 'mysql_native_password', Password = PASSWORD('secret') WHERE User = 'root';
+FLUSH PRIVILEGES;
