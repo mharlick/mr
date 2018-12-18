@@ -67,3 +67,16 @@ sudo a2enmod rewrite
 sudo systemctl restart apache2
 
 sudo vi /etc/apache2/sites-enabled/000-default.conf
+
+<VirtualHost *:80>
+       ServerAdmin webmaster@localhost
+       DocumentRoot /home/m/web-app/public
+        ServerName m
+
+         <Directory /home/m/web-app/public>
+                Options +FollowSymLinks
+                AllowOverride All
+                Require all granted
+         </Directory>
+</VirtualHost>
+
