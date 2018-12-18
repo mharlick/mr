@@ -39,6 +39,8 @@ sudo add-apt-repository "deb [arch=amd64] https://packages.microsoft.com/repos/v
 
 sudo apt install code
 
+sudo apt-get install php7.0-mysql
+
 sudo mysql
 
 update mysql.user set plugin = 'mysql_native_password' where User='root';
