@@ -21,6 +21,10 @@ quit;
 
 sudo apt install php libapache2-mod-php
 
+sudo apt-get install php-common php-mbstring php-xml php-zip
+
+sudo apt install php-bcmath
+
 sudo systemctl restart apache2
 
 sudo apt install mysql-workbench
