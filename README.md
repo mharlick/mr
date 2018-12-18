@@ -80,3 +80,6 @@ sudo vi /etc/apache2/sites-enabled/000-default.conf
          </Directory>
 </VirtualHost>
 
+sudo systemctl restart apache2
+
+update .env
