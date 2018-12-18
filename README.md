@@ -29,7 +29,9 @@ sudo systemctl restart apache2
 
 sudo apt install mysql-workbench
 
-sudo apt updatesudo apt install software-properties-common apt-transport-https wget
+sudo apt update
+
+sudo apt install software-properties-common apt-transport-https wget
 
 wget -q https://packages.microsoft.com/keys/microsoft.asc -O- | sudo apt-key add -
 
@@ -83,3 +85,38 @@ sudo vi /etc/apache2/sites-enabled/000-default.conf
 sudo systemctl restart apache2
 
 update .env
+
+create meetingroom schema and user
+
+cd web-app/storate
+
+sudo apt install nodejs npm
+
+composer global require laravel/installer
+
+sudo apt install git
+
+git clone https://github.com/laravel/spark-installer.git
+
+cd spark-installer
+
+composer install
+
+chmod -R 777 *
+
+sudo apt-get install php-curl
+
+add: export PATH=$HOME/spark-installer:$HOME/.config/composer/vendor/bin:$PATH to .bashrc
+
+spark register token-value
+
+spark new web
+
+change dir wen-app to web1 and web to web-app
+
+sudo systemctl restart apache2
+
+cd storage
+
+chmod -R 777 *
+
