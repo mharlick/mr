@@ -65,3 +65,5 @@ laravel new web-app
 sudo a2enmod rewrite
 
 sudo systemctl restart apache2
+
+sudo vi /etc/apache2/sites-enabled/000-default.conf
