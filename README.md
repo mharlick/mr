@@ -57,3 +57,11 @@ php -r "unlink('composer-setup.php');"
 mv composer.phar /usr/local/bin/composer
 
 composer global require laravel/installer
+
+add: export PATH=$HOME/.config/composer/vendor/bin:$PATH to .bashrc
+
+laravel new web-app
+
+sudo a2enmod rewrite
+
+sudo systemctl restart apache2
