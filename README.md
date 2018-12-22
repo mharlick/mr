@@ -10,8 +10,6 @@ $ sudo apt install apache2
 
 $ sudo apt install mysql-server mysql-common mysql-client
 
-$ 
-
 mysql> use mysql; # use mysql table
 mysql> update user set plugin="mysql_native_password" where User='root'; 
 mysql> update user set authentication_string=PASSWORD("m") where User='root'; 
