@@ -109,6 +109,12 @@ $ cd web/storage
 
 $ chmod -R 777 *
 
+$ cd ../bootstrap
+
+$ chmod -R 777 *
+
+$ php artisan migrate
+
 #### Optional : vscode
 
 $ wget -q https://packages.microsoft.com/keys/microsoft.asc -O- | sudo apt-key add -
