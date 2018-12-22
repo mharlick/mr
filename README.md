@@ -30,30 +30,27 @@ $ sudo apt install mysql-workbench
 
 $ sudo apt install software-properties-common apt-transport-https wget
 
+$ php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"
 
+$ php -r "if (hash_file('sha384', 'composer-setup.php') === '93b54496392c062774670ac18b134c3b3a95e5a5e5c8f1a9f115f203b75bf9a129d5daa8ba6a13e2cc8a1da0806388a8') { echo 'Installer verified'; } else { echo 'Installer corrupt'; unlink('composer-setup.php'); } echo PHP_EOL;"
 
+$ php composer-setup.php
 
-php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"
+$ php -r "unlink('composer-setup.php');"
 
-php -r "if (hash_file('sha384', 'composer-setup.php') === '93b54496392c062774670ac18b134c3b3a95e5a5e5c8f1a9f115f203b75bf9a129d5daa8ba6a13e2cc8a1da0806388a8') { echo 'Installer verified'; } else { echo 'Installer corrupt'; unlink('composer-setup.php'); } echo PHP_EOL;"
+$ sudo mv composer.phar /usr/local/bin/composer
 
-php composer-setup.php
+$ composer global require laravel/installer
 
-php -r "unlink('composer-setup.php');"
+add-> export PATH=$HOME/.config/composer/vendor/bin:$PATH to .bashrc
 
-mv composer.phar /usr/local/bin/composer
+$ laravel new web-app
 
-composer global require laravel/installer
+$ sudo a2enmod rewrite
 
-add: export PATH=$HOME/.config/composer/vendor/bin:$PATH to .bashrc
+$ sudo systemctl restart apache2
 
-laravel new web-app
-
-sudo a2enmod rewrite
-
-sudo systemctl restart apache2
-
-sudo vi /etc/apache2/sites-enabled/000-default.conf
+% sudo vi /etc/apache2/sites-enabled/000-default.conf
 
 <VirtualHost *:80>
        ServerAdmin webmaster@localhost
@@ -73,37 +70,37 @@ update .env with db settings
 
 create meetingroom schema and user
 
-cd web-app/storate
+$ cd web-app/storate
 
-sudo apt install nodejs npm
+$ sudo apt install nodejs npm
 
-composer global require laravel/installer
+$ composer global require laravel/installer
 
-sudo apt install git
+$ sudo apt install git
 
-git clone https://github.com/laravel/spark-installer.git
+$ git clone https://github.com/laravel/spark-installer.git
 
-cd spark-installer
+$ cd spark-installer
 
-composer install
+$ composer install
 
-chmod -R 777 *
+$ chmod -R 777 *
 
-sudo apt-get install php-curl
+$ sudo apt-get install php-curl
 
 add: export PATH=$HOME/spark-installer:$HOME/.config/composer/vendor/bin:$PATH to .bashrc
 
-spark register token-value
+$ spark register token-value
 
-spark new web
+$ spark new web
 
 change dir wen-app to web1 and web to web-app
 
-sudo systemctl restart apache2
+$ sudo systemctl restart apache2
 
-cd storage
+$ cd storage
 
-chmod -R 777 *
+$ chmod -R 777 *
 
 #### Optional : vscode
 
