@@ -1,5 +1,6 @@
 #### Download and install Ubuntu 18.04,1 Desktop image
 **run the following from commmand prompt**
+
 sudo apt update
 
 sudo apt upgrade
