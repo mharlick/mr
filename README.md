@@ -22,6 +22,8 @@ $ sudo apt-get install php-common php-mbstring php-xml php-zip
 
 $ sudo apt install php-bcmath
 
+$ sudo apt-get install php-curl
+
 $ sudo apt-get install php7.0-mysql
 
 $ sudo systemctl restart apache2
@@ -42,15 +44,15 @@ $ sudo mv composer.phar /usr/local/bin/composer
 
 $ composer global require laravel/installer
 
-add-> export PATH=$HOME/.config/composer/vendor/bin:$PATH to .bashrc
-
 $ laravel new web-app
 
 $ sudo a2enmod rewrite
 
 $ sudo systemctl restart apache2
 
-% sudo vi /etc/apache2/sites-enabled/000-default.conf
+** I set-up apache2 to point to my home directory
+
+$ sudo vi /etc/apache2/sites-enabled/000-default.conf
 
 ```javascript
 <VirtualHost *:80>
@@ -65,20 +67,27 @@ $ sudo systemctl restart apache2
          </Directory>
 </VirtualHost>
 ```
-
 $ sudo systemctl restart apache2
-
-update .env with db settings
 
 create meetingroom schema and user
 
-$ cd web-app/storate
+$ cd web-app
+
+create .env with db settings
+
+$ cd web-app/storage
+
+$ chmod -R 777 *
+
+$ cd ..
 
 $ sudo apt install nodejs npm
 
-$ composer global require laravel/installer
+$  php artisan key:generate
 
 $ sudo apt install git
+
+$ cd ~
 
 $ git clone https://github.com/laravel/spark-installer.git
 
@@ -86,17 +95,11 @@ $ cd spark-installer
 
 $ composer install
 
-$ chmod -R 777 *
-
-$ sudo apt-get install php-curl
-
 add: export PATH=$HOME/spark-installer:$HOME/.config/composer/vendor/bin:$PATH to .bashrc
 
 $ spark register token-value
 
 $ spark new web
-
-change dir wen-app to web1 and web to web-app
 
 $ sudo systemctl restart apache2
 
@@ -108,7 +111,7 @@ $ chmod -R 777 *
 
 $ wget -q https://packages.microsoft.com/keys/microsoft.asc -O- | sudo apt-key add -
 
-sudo add-apt-repository "deb [arch=amd64] https://packages.microsoft.com/repos/vscode stable main"
+$ sudo add-apt-repository "deb [arch=amd64] https://packages.microsoft.com/repos/vscode stable main"
 
-sudo apt install code
+$ sudo apt install code
 
