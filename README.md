@@ -52,6 +52,7 @@ $ sudo systemctl restart apache2
 
 % sudo vi /etc/apache2/sites-enabled/000-default.conf
 
+```javascript
 <VirtualHost *:80>
        ServerAdmin webmaster@localhost
        DocumentRoot /home/m/web-app/public
@@ -63,6 +64,7 @@ $ sudo systemctl restart apache2
                 Require all granted
          </Directory>
 </VirtualHost>
+```
 
 $ sudo systemctl restart apache2
 
