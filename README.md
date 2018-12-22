@@ -1,19 +1,19 @@
 #### Download and install Ubuntu 18.04,1 Desktop image
 **run the following from commmand prompt**
 
-`sudo apt update
+$ sudo apt update
 
-sudo apt upgrade
+$ sudo apt upgrade
 
-sudo apt install apache2
+$ sudo apt install apache2
 
-sudo systemctl status apache2
+$ sudo systemctl status apache2
 
-sudo apt install mysql-server
+$ sudo apt install mysql-server
 
-sudo apt-get install mysql-common
+$ sudo apt-get install mysql-common
 
-sudo mysql`
+$ sudo mysql
 
 use mysql; # use mysql table
 update user set authentication_string=PASSWORD("m") where User='root'; 
