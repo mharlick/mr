@@ -1,3 +1,4 @@
+## Creating a DEV server
 #### Download and install Ubuntu 18.04.1 desktop image
 **run the following from a commmand prompt**
 
@@ -7,16 +8,13 @@ $ sudo apt upgrade
 
 $ sudo apt install apache2
 
-$ sudo apt install mysql-server
+$ sudo apt install mysql-server mysql-common mysql-client
 
-$ sudo apt-get install mysql-common
-
-$ sudo mysql
+$ 
 
 mysql> use mysql; # use mysql table
-update user set authentication_string=PASSWORD("m") where User='root'; 
-update user set plugin="mysql_native_password" where User='root'; 
-
+mysql> update user set plugin="mysql_native_password" where User='root'; 
+mysql> update user set authentication_string=PASSWORD("m") where User='root'; 
 mysql> flush privileges;
 mysql> quit;
 
@@ -26,22 +24,16 @@ $ sudo apt-get install php-common php-mbstring php-xml php-zip
 
 $ sudo apt install php-bcmath
 
+$ sudo apt-get install php7.0-mysql
+
 $ sudo systemctl restart apache2
 
 $ sudo apt install mysql-workbench
 
-$ sudo apt update
-
 $ sudo apt install software-properties-common apt-transport-https wget
 
-sudo apt-get install php7.0-mysql
 
-sudo mysql
 
-update mysql.user set plugin = 'mysql_native_password' where User='root';
-// to change the password too (credits goes to Pothi Kalimuthu)
-// UPDATE mysql.user SET plugin = 'mysql_native_password', Password = PASSWORD('secret') WHERE User = 'root';
-FLUSH PRIVILEGES;
 
 php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"
 
@@ -77,9 +69,9 @@ sudo vi /etc/apache2/sites-enabled/000-default.conf
          </Directory>
 </VirtualHost>
 
-sudo systemctl restart apache2
+$ sudo systemctl restart apache2
 
-update .env
+update .env with db settings
 
 create meetingroom schema and user
 
