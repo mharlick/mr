@@ -99,11 +99,13 @@ add: export PATH=$HOME/spark-installer:$HOME/.config/composer/vendor/bin:$PATH t
 
 $ spark register token-value
 
+$ cd
+
 $ spark new web
 
 $ sudo systemctl restart apache2
 
-$ cd storage
+$ cd web/storage
 
 $ chmod -R 777 *
 
